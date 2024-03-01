@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne } from 'next/font/google'
 import './globals.css'
-import Header from './_components/_Header/Header'
+import Header from './_components/_Header'
 
 const syne = Syne({ subsets: ['latin'], display: 'swap' })
 
