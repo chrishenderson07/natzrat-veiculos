@@ -22,6 +22,7 @@ const config = {
 				White: '#ffffff',
 				Black: '#222222',
 				Red: '#fd3b3b',
+				LightRed: '#ff4d4d',
 			},
 			fontSize: {
 				sm: '0.875rem',

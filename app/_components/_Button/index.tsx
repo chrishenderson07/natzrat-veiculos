@@ -8,11 +8,12 @@ interface ButtonProps {
 
 const Button = ({ path, label }: ButtonProps) => {
 	return (
-		<Link
-			href={path}
-			className="rounded-2xl">
-			<ShadButton variant={'default'}>{label}</ShadButton>
-		</Link>
+		<ShadButton
+			variant={'default'}
+			asChild
+			cla>
+			<Link href={path}> {label} </Link>
+		</ShadButton>
 	)
 }
 
