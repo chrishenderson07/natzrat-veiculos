@@ -1,4 +1,4 @@
-import { Button as ShadButton } from '@/app/_lib/components/ui/button'
+import { Button as ShadButton } from '@/app/_components/ui/button'
 import Link from 'next/link'
 
 interface ButtonProps {
