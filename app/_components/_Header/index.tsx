@@ -1,11 +1,10 @@
 import { Nav } from './Nav'
 import logo from '@/public/images/logo.svg'
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '../_Button'
 const Header = () => {
 	return (
-		<header>
+		<header className="container flex justify-between items-center ">
 			<Image
 				src={logo}
 				alt="Natzrat Veículos"
@@ -14,8 +13,8 @@ const Header = () => {
 
 			<div className="Actions">
 				<Button
-					path="/login"
-					label="Login"
+					path="/contato"
+					label="Contato"
 				/>
 			</div>
 		</header>

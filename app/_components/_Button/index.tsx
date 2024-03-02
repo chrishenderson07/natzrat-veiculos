@@ -11,7 +11,7 @@ const Button = ({ path, label }: ButtonProps) => {
 		<ShadButton
 			variant={'default'}
 			asChild
-			cla>
+			className="text-base w-fit px-7 py-2 rounded-full">
 			<Link href={path}> {label} </Link>
 		</ShadButton>
 	)
