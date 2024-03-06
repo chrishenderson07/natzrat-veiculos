@@ -1,42 +1,33 @@
-'use client'
+import Button from '@/app/_components/_Button'
+import Image from 'next/image'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFade, Navigation, Pagination } from 'swiper/modules'
+interface SlideProps {
+	heading: string
+	paragraph: string
+	buttonPath: string
+	imageSrc: string
+}
 
-import 'swiper/css'
-import 'swiper/css/effect-fade'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-const Slide = () => {
+const Slide = ({ heading, paragraph, buttonPath, imageSrc }: SlideProps) => {
 	return (
-		<>
-			<Swiper
-				modules={[EffectFade, Navigation, Pagination]}
-				effect="fade"
-				navigation
-				pagination={{ clickable: true }}
-				className="mySwiper">
-				<SwiperSlide>
-					<img
-						src="https://via.placeholder.com/1920x1080"
-						alt="slide"
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<img
-						src="https://via.placeholder.com/1920x1080"
-						alt="slide"
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<img
-						src="https://via.placeholder.com/1920x1080"
-						alt="slide"
-					/>
-				</SwiperSlide>
-			</Swiper>
-		</>
+		<div className="container h-screen max-h-[700px] grid grid-cols-3">
+			<div className="col-span-1 flex flex-col justify-center gap-12">
+				<h1 className="heading1">{heading}</h1>
+
+				<p className="paragraph">{paragraph}</p>
+
+				<Button
+					label="Saiba Mais"
+					path={buttonPath}
+				/>
+			</div>
+			<div className="col-span-2 flex items-center">
+				<Image
+					src={imageSrc}
+					alt="Jeep Compass"
+				/>
+			</div>
+		</div>
 	)
 }
 
