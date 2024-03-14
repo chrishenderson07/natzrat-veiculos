@@ -8,7 +8,7 @@ import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Slider = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
@@ -37,7 +37,7 @@ const Slider = () => {
 	]
 
 	return (
-		<>
+		<div className="bg-Gray">
 			<Swiper
 				spaceBetween={50}
 				slidesPerView={1}
@@ -61,7 +61,7 @@ const Slider = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</>
+		</div>
 	)
 }
 
