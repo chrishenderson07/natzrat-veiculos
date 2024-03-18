@@ -9,7 +9,7 @@ const BrandBar = () => {
 	return (
 		<div className="bg-slate-700 w-full h-24">
 			<Swiper
-				slidesPerView={5}
+				slidesPerView={6}
 				modules={[Autoplay]}
 				autoplay={{ delay: 0, disableOnInteraction: false }}
 				loop={true}
