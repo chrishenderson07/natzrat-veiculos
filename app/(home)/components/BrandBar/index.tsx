@@ -1,32 +1,70 @@
 'use client'
 
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, EffectCards } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 
 import './styles.css'
 
 const BrandBar = () => {
+	const carBrandsLogo: { logo: string }[] = [
+		{
+			logo: require('@/public/images/car_brands/audi.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/citroen.svg'),
+		},
+
+		{
+			logo: require('@/public/images/car_brands/honda.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/jeep.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/kia.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/land-rover.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/mercedes.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/mitsubishi.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/nissan.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/renault.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/toyota.svg'),
+		},
+		{
+			logo: require('@/public/images/car_brands/vw.svg'),
+		},
+	]
 	return (
-		<div className="bg-slate-700 w-full h-24">
+		<div className="bg-white w-full py-3">
 			<Swiper
-				slidesPerView={6}
+				slidesPerView={7}
 				modules={[Autoplay]}
 				autoplay={{ delay: 0, disableOnInteraction: false }}
+				freeMode={false}
 				loop={true}
-				freeMode={true}
-				effect="slide"
-				speed={3000}
+				speed={3500}
 				className="mySwiper">
-				<SwiperSlide>Slide 1</SwiperSlide>
-				<SwiperSlide>Slide 2</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-				<SwiperSlide>Slide 5</SwiperSlide>
-				<SwiperSlide>Slide 6</SwiperSlide>
-				<SwiperSlide>Slide 7</SwiperSlide>
-				<SwiperSlide>Slide 8</SwiperSlide>
-				<SwiperSlide>Slide 9</SwiperSlide>
-				<SwiperSlide>Slide 10</SwiperSlide>
+				{carBrandsLogo.map((brand) => (
+					<SwiperSlide>
+						<Image
+							src={brand.logo}
+							alt="Imagem da marca"
+							width={100}
+						/>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)
