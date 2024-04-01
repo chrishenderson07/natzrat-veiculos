@@ -47,7 +47,7 @@ const BrandBar = () => {
 		},
 	]
 	return (
-		<div className="bg-white w-full py-3">
+		<div className="bg-white w-full py-3 shadow-lg">
 			<Swiper
 				slidesPerView={7}
 				modules={[Autoplay]}
